@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evil Calculator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="favicon.svg">
+</head>
+<body>
+    <div class="title-container">
+        <h1>👻 Evil Calculator</h1>
+        <h3>Made on 03.12.25 - 28 days to go!</h3>
+    </div>
+    
+    <div class="main-container">
+        <div class="input-section">
+            <div class="input-card">
+                <h2>Add Entry</h2>
+                <div class="form-group">
+                    <label for="entryName">Name</label>
+                    <input type="text" id="entryName">
+                </div>
+                <div class="form-group">
+                    <label for="entryAmount">Amount</label>
+                    <input type="text" id="entryAmount">
+                </div>
+                <div class="form-group">
+                    <label for="entryType">Type</label>
+                    <select id="entryType">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+                <button class="btn" id="addBtn">Add</button>
+            </div>
+            
+            <div class="export-card">
+                <button class="btn" id="export-btn">Export</button>
+            </div>
+        </div>
+        
+        <div class="receipt-section">
+            <div class="receipt" id="receipt">
+                <div class="receipt-header">
+                    <div class="receipt-title">YOUR EVIL SPENDINGS</div>
+                    <div class="receipt-subtitle">
+                        <span>Transactions Receipt of</span>
+                        <span id="receipt-date"></span>
+                    </div>
+                </div>
+                
+                <div class="receipt-body">
+                    <div class="receipt-row header">
+                        <span>Description</span>
+                        <span>Amount</span>
+                    </div>
+                    <div class="receipt-entries" id="receiptEntries">
+                        <div class="empty-receipt">Nothing here yet...</div>
+                    </div>
+                </div>
+                
+                <div class="receipt-total">
+                    <span>TOTAL:</span>
+                    <span id="receiptTotal">0 ₽</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
